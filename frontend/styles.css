@@ -1,0 +1,778 @@
+body {
+	margin: 0;
+}
+
+.flex-container1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 450px;
+	padding: 50px;
+}
+
+.pic {
+	width: 35%;
+	height: inherit;
+	border-radius: 5px;
+	margin: 5px;
+	position: relative;
+}
+
+.pic > img {
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.desption {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	width: 70%;
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+}
+.despovera {
+	width: 100%;
+}
+
+.despndani > h2 {
+	font-family: "Fira Code", monospace;
+	font-style: oblique;
+	font-size: 60px;
+	text-align: center;
+}
+
+.despndani h2 span {
+	transform: translate(-50%, -50%);
+	font-size: 40px;
+	letter-spacing: 0.1em;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: rgba(0, 255, 183, 0.703);
+	text-shadow: 5px 5px cyan, 10px 10px #000000;
+}
+
+.despndani h1:nth-child(1) {
+	color: #355c7d;
+	font-family: "Fira Code", monospace;
+	font-weight: 800;
+	font-size: 30px;
+	margin: 0 0 0 35%;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 180px;
+	animation: type 2s steps(40, end) forwards;
+}
+
+.despndani h1:nth-child(2) {
+	opacity: 0;
+	font-family: "Work Sans", sans-serif;
+	margin: 0 auto auto auto;
+	background: linear-gradient(
+		to right,
+		antiquewhite,
+		cyan,
+		rgba(0, 255, 255, 0.286)
+	);
+	font-weight: 800;
+	font-size: 120px;
+	width: 430px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	overflow: hidden;
+	animation: shring-animation 2.2s steps(40, end) 2s forwards,
+		blink 0.5s step-end infinite alternate;
+}
+
+@keyframes shring-animation {
+	0% {
+		background-position: 0 0;
+		opacity: 0;
+		width: 0;
+	}
+	1% {
+		background-position: 0 0;
+		opacity: 1;
+		border-right: 3px solid cyan;
+	}
+	50% {
+		background-position: 150px 0;
+		opacity: 1;
+		border-right: 3px solid cyan;
+	}
+	100% {
+		background-position: 400px 0;
+		opacity: 1;
+		border-right: 3px solid cyan;
+	}
+}
+
+@keyframes type {
+	0% {
+		width: 0;
+	}
+	1%,
+	99% {
+		border-right: 3px solid cyan;
+	}
+	100% {
+		border-right: none;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}
+
+.ndani {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.ndanione {
+	margin: 5px;
+}
+
+.ndanione a button {
+	border: 1px solid cyan;
+	padding: 20px;
+	border-radius: 10px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 20px;
+	background-color: antiquewhite;
+}
+
+.ndanione a button:hover {
+	background-color: cyan;
+}
+
+.ndanitwo {
+	margin: 5px;
+}
+
+.ndanitwo a button {
+	border-radius: 10px;
+	padding: 20px;
+	background-color: aqua;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 20px;
+}
+
+.ndanitwo a button:hover {
+	background-color: antiquewhite;
+}
+
+@media only screen and (max-width: 880px) {
+	.flex-container1 {
+		flex-direction: column;
+		position: relative;
+		padding: 20px;
+		height: 400px;
+	}
+	.pic {
+		width: 200px;
+		height: 250px;
+		position: absolute;
+		top: 40px;
+		right: 70px;
+		border-radius: 50%;
+	}
+
+	.pic > img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	.despndani h1:nth-child(1) {
+		font-weight: 800;
+		font-size: 16px;
+		margin: 0 0 0 20%;
+
+		width: 100px;
+	}
+
+	.despndani h1:nth-child(2) {
+		font-weight: 800;
+		font-size: 70px;
+		width: 250px;
+	}
+
+	.despndani > h2 {
+		font-size: 30px;
+	}
+	.ndanione a button {
+		padding: 15px;
+
+		font-size: 15px;
+	}
+	.ndanitwo a button {
+		padding: 15px;
+
+		font-size: 15px;
+	}
+}
+
+@media only screen and (max-width: 430px) {
+	.pic {
+		width: 80px;
+		height: 150px;
+	}
+
+	.pic > img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.dodo {
+	font-size: 60px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+}
+
+/* If the screen size is 760px wide or less*/
+@media only screen and (max-width: 760px) {
+	.dodo {
+		font-size: 30px;
+	}
+}
+
+.flex-container2 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+.poster {
+	height: 200px;
+	width: 23%;
+	padding: 30px;
+	background-color: antiquewhite;
+	margin: 5px;
+	border-radius: 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+.poster:hover {
+	background-color: rgba(0, 255, 255, 0.188);
+}
+
+.cposter {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 10px;
+}
+
+.line > hr {
+	border: 2px solid cyan;
+	text-align: left;
+	margin-left: 0;
+	width: 30%;
+}
+
+.posheadline {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	text-align: left;
+}
+
+.des {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	text-align: left;
+}
+
+.twopic {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	background-color: aqua;
+}
+
+.twopic iconifly {
+	font-size: 30px;
+}
+
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 800px) {
+	.flex-container3 {
+		display: flex;
+		flex-direction: column;
+	}
+	.poster {
+		height: 200px;
+		width: 100%;
+		padding: 20px;
+	}
+}
+
+.flex-container3 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 70px;
+}
+
+.resume {
+	padding: 30px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	text-align: left;
+	width: 30%;
+	background-color: rgba(0, 255, 255, 0.281);
+	border-radius: 20px;
+	margin: 5px;
+}
+
+.resume a button {
+	padding: 12px;
+	border: 2px solid cyan;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.resume a button:hover {
+	background-color: antiquewhite;
+}
+
+.quote {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	border-radius: 20px;
+	background-color: antiquewhite;
+	margin: 5px;
+}
+
+.quote > p {
+	padding: 30px;
+	font-family: cursive;
+	font-size: 40px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* If the screen size is 760px wide or less */
+@media only screen and (max-width: 760px) {
+	.flex-container3 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.resume {
+		padding: 10px;
+		width: 100%;
+	}
+	.quote {
+		width: 100%;
+	}
+	.quote > p {
+		padding: 10px;
+		font-family: cursive;
+		font-size: 30px;
+	}
+}
+
+.blog {
+	font-size: 50px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+	.blog {
+		font-size: 25px;
+	}
+}
+
+.flex-container4 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+.article {
+	height: 200px;
+	width: 28%;
+	padding: 15px;
+	margin: 5px;
+	border-radius: 20px;
+	border: 2px solid cyan;
+	position: relative;
+	cursor: pointer;
+}
+.article:hover {
+	transform: scale(1.05);
+}
+.jamoja {
+	background-image: url("images/keyboard.jpg");
+	background-size: cover;
+}
+.jambili {
+	background-image: url("images/workdesk.jpg");
+	background-size: cover;
+}
+.jatatu {
+	background-image: url("images/design.jpg");
+	background-size: cover;
+}
+
+.article > a {
+	padding: 15px;
+	color: white;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	text-decoration: none;
+	text-align: left;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: rgb(0, 0, 0, 0.4);
+	border-radius: inherit;
+}
+
+/* If the screen size is 800px wide or less */
+@media only screen and (max-width: 800px) {
+	.flex-container4 {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.article {
+		height: 150px;
+		width: 90%;
+		padding: 10px;
+		margin: 10px;
+	}
+}
+
+.read {
+	text-align: right;
+	padding: 20px;
+}
+
+.read a button {
+	padding: 10px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	width: 200px;
+	font-weight: 700;
+	border-radius: 10px;
+	border: 1px solid cyan;
+	cursor: pointer;
+}
+
+.read a button:hover {
+	background-color: antiquewhite;
+	color: black;
+}
+
+.read > button > a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.flex-container5 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.flex-container5 hr {
+	width: 80%;
+	border: 1px solid cyan;
+}
+
+.opotune {
+	text-align: centre;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 20px;
+}
+
+.mainsocials {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.socials {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: cyan;
+	border-radius: 50%;
+}
+
+.socials:hover {
+	background-color: antiquewhite;
+	transform: scale(1.005);
+}
+
+.socials a {
+	text-decoration: none;
+	font-size: 30px;
+	color: black;
+}
+
+@media only screen and (max-width: 800px) {
+	.opotune {
+		padding: 20px;
+	}
+	.socials {
+		margin: 15px;
+		width: 30px;
+		height: 30px;
+	}
+
+	.socials a {
+		font-size: 15px;
+	}
+}
+
+.flex-container7 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	margin-top: 20px;
+	padding: 50px;
+}
+
+.butts {
+	color: black;
+	padding: 20px;
+	border-radius: 15px;
+	margin: 10px;
+	text-align: center;
+	margin: 5px;
+	width: 50%;
+}
+
+.butts > p {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	word-wrap: break-word;
+}
+
+.pirione p {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 60px;
+	font-weight: 900;
+}
+
+.butts a button {
+	padding: 15px;
+	width: 250px;
+	border: 2px solid cyan;
+	border-radius: 10px;
+	font-size: large;
+	font-weight: 900;
+}
+
+.butts a button:hover {
+	background-color: cyan;
+}
+
+.buttss {
+	width: 40%;
+	height: inherit;
+}
+
+.buttss img {
+	width: 100%;
+	height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+	.flex-container7 {
+		position: relative;
+		padding: 20px;
+	}
+	.pirione p {
+		font-size: 40px;
+		font-weight: 900;
+	}
+	.butts a button {
+		padding: 10px;
+		width: 120px;
+	}
+	.buttss {
+		width: 40%;
+		height: 150px;
+	}
+
+	.butts > p {
+		font-size: 16px;
+	}
+}
+
+/* styles for website page
+   */
+
+.flexwebsite {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	padding: 40px;
+	background-color: white;
+	height: 300px;
+}
+
+.flexwebsiteone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	padding: 40px;
+	background-color: rgb(189, 220, 220);
+	height: 300px;
+}
+
+.flexwebsitetwo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	padding: 40px;
+	background-color: antiquewhite;
+	height: 300px;
+}
+/* all the flex divs in the website page styling ends here */
+.wendanione {
+	height: 200px;
+	width: 40%;
+	border-radius: 20px;
+	margin: 5px;
+	box-shadow: 15px 15px grey;
+	cursor: pointer;
+}
+
+.wendanione:hover {
+	transform: scale(1.025);
+}
+
+.wendanione > img {
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+
+.wendanitwo {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	padding: 50px;
+}
+
+.kalaini {
+	display: flex;
+}
+.kalaini hr {
+	border: 2px solid black;
+	text-align: left;
+	margin-left: 0;
+	width: 30%;
+}
+
+.kaheada a {
+	text-decoration: none;
+	color: grey;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.kaheada:active {
+	color: cyan;
+}
+
+.kaexpla p {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+	.flexwebsite {
+		display: flex;
+		flex-direction: column;
+		height: 500px;
+	}
+	.flexwebsiteone {
+		display: flex;
+		flex-direction: column;
+		height: 500px;
+	}
+	.flexwebsitetwo {
+		display: flex;
+		flex-direction: column;
+		height: 500px;
+	}
+
+	.wendanione {
+		height: 200px;
+		width: 70%;
+		border-radius: 20px;
+		margin: 5px;
+	}
+}
+
+/* styling fo website page ends here */
+
+/* portfolio page */
+
+.flex-portfolio {
+	margin-top: 10px;
+	background-color: antiquewhite;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 600px;
+}
+
+.flex-portfolio hr {
+	border: 1px solid grey;
+	width: 80%;
+}
+
+.portfolioone {
+	margin: 10px;
+	padding: 15px;
+	text-align: center;
+}
+
+.portfolioone:hover {
+	transform: scale(1.5);
+}
+
+.portfolioone > a {
+	text-decoration: none;
+}
+
+.portfolioone > a > h2 {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 20px;
+	font-weight: 800;
+}

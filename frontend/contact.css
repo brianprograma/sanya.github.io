@@ -1,0 +1,109 @@
+/* css for the contact page */
+body {
+	background-image: url("images/pexels-tranmautritam-225502.jpg");
+	background-size: cover;
+}
+
+.reach {
+	display: flex;
+	justify-content: center;
+}
+.reach h2 {
+	text-align: centre;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 40px;
+	font-weight: 900;
+	color: antiquewhite;
+}
+.consocials {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.confb {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: cyan;
+	border-radius: 50%;
+}
+
+.confb a {
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+}
+
+.confb a:hover {
+	color: antiquewhite;
+}
+
+form {
+	max-width: 450px;
+	margin: 50px auto;
+}
+
+.feedback-input {
+	color: black;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	border-radius: 5px;
+	line-height: 22px;
+	background-color: transparent;
+	border: 2px solid cyan;
+	transition: all 0.3s;
+	padding: 13px;
+	margin-bottom: 15px;
+	width: 100%;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+.feedback-input:focus {
+	border: 2px solid #cc4949;
+}
+
+textarea {
+	height: 150px;
+	line-height: 150%;
+	resize: vertical;
+}
+
+[type="submit"] {
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+	width: 100%;
+	background: cyan;
+	border-radius: 5px;
+	border: 0;
+	cursor: pointer;
+	color: black;
+	font-size: 24px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: all 0.3s;
+	margin-top: -4px;
+	font-weight: 700;
+}
+[type="submit"]:hover {
+	background: black;
+}
+
+@media only screen and (max-width: 800px) {
+	form {
+		max-width: 280px;
+		margin: 25px auto;
+	}
+
+	.confb {
+		margin: 10px;
+		width: 30px;
+		height: 30px;
+	}
+}
